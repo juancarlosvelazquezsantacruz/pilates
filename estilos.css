@@ -1,0 +1,351 @@
+body{
+    margin: 0;
+    background: rgba(255, 255, 255, 0.644);
+    background: lightgoldenrodyellow;
+}
+
+.header{
+    display:flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center; 
+    background: lightgoldenrodyellow;
+    border-bottom: double;
+    min-height: 80px;
+    width: 100vw;
+    box-sizing: border-box;
+} 
+.header img{
+    margin-left: 20px;
+    width: 150px;
+    height: 100px;
+    cursor: pointer;
+}
+
+.indice {    
+  display: grid;
+  grid-template-columns: 150px  70px repeat(2,100px) 40px 100px;
+  grid-template-rows: 100px;
+  align-items: center;
+  justify-items: center;
+}
+
+
+.indice a:hover{
+    outline: 2px solid black;
+    border-radius: 25px;
+    padding: 10px;
+    background: lightgreen;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+@media(width<900px){
+    .header{
+        flex-direction: column; 
+        gap:10px
+    }
+    .indice{      
+        gap: 5px;
+        grid-template-columns: 140px 100px 100px;
+        grid-template-rows: 40px 40px;
+    }
+    
+}
+
+.videodefondo{
+    height: 60vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.videodefondo video{
+    border-radius: 25px;
+    margin: 5px;
+    height: 60%;
+    width: 99%;   
+    position: absolute;
+    object-fit: unset;
+}
+
+.videodefondo article{
+    color: aliceblue;
+    z-index: 1;
+}
+
+.videodefondo h1{
+    font-size: 3.5rem;
+    text-align: center;
+    font-weight: 800;
+}
+
+.videodefondo p{
+    font-size: 2.5rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+.capa{
+    position: absolute;
+    border-radius: 25px;
+    height: 100px;
+    height: 60%;
+    width: 99%;
+    background: black;
+    z-index: 2;
+    opacity: 0.3;
+    mix-blend-mode: overlay;
+}
+
+.visionymision{
+    background: rgba(144, 238, 144, 0.664);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 10px;
+    border-top: 1px solid black;
+}
+.visionymision p{
+    font-size: 1.5rem;
+}
+
+.vision{    
+    display: flex;
+    width: 25%;    
+    flex-direction: column;
+}
+.vision img{
+    align-self: center;
+}
+
+.mision{  
+    display: flex;
+    width: 25%;    
+    flex-direction: column;
+}
+.mision img{
+    align-self: center;
+    
+}
+
+@media(width<900px){
+    .visionymision{
+        flex-direction: column;
+        align-items: center;
+    }
+    .vision{
+        width: 50%;
+    }
+    .mision{
+        width: 50%;
+    }
+}
+.coaches{
+    background: lightblue;
+    border-top: 1px solid black;  
+}
+
+.entrenadoras{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    max-width: 1245px;
+    justify-items: center;
+    margin: 0 auto;
+    gap:15px
+}
+.entrenadoras p{
+    display: flex;
+    justify-content: center;
+}
+
+.coaches header{   
+    display: flex;
+    justify-content: center;
+}
+
+.coaches img{
+    border-radius: 200px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+}
+@media(width<1260px){
+    .entrenadoras :last-child{
+        grid-column: 2/3;
+    }
+}
+@media(width<945px){
+    .entrenadoras :last-child{
+        grid-column: auto;
+    }
+}
+.objetivos{
+    background: rgba(255, 182, 193, 0.466);
+    border-top: 1px solid black; 
+    padding: 10px;
+}
+
+.objetivos article{
+    display: grid; 
+    grid-template-columns: repeat(auto-fill,minmax(530px,1fr));
+    max-width: 1200px;
+    margin: 0 auto;
+    gap:10px;
+}
+
+.objetivos img{
+    width: 550px;
+    height: 550px;
+    justify-self: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+.objetivos ul{
+    align-content: center;
+    font-size: 1.5rem;
+}
+
+.titulo{
+    border-top: 1px solid black;
+    background: lightyellow;
+    padding: 1px;
+}
+
+.ubicacion{
+    background: lightyellow;
+    display: flex;
+    flex-flow:row nowrap;
+    justify-content: space-around;   
+}
+
+.durango{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: 15px;
+    background: lightyellow;
+    gap:5px   
+}
+
+.ubicacion aside{
+    align-self: center;
+    width: 130px;
+    padding: 5px;   
+}
+
+.ubicacion aside:hover{
+    border-radius: 25px;
+    background: rgba(0, 0, 0, 0.103);
+}
+
+.mexicali{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: 15px;
+    background: lightyellow;
+    gap:5px
+}
+
+.ubicacion img{
+    width: 100%;
+    object-fit: cover;
+    cursor: pointer;
+    border-radius: 25px;
+    border: groove; 
+}
+
+@media(width<900px){
+    .ubicacion{
+        align-items: center;
+        flex-direction: column;
+    }
+    .durango{
+        width: 90%;
+    }
+    .mexicali{
+        width: 90%;
+    }
+}
+
+.app{
+    background: lightsalmon;
+    border-top: 1px solid black;
+    padding: 10px;
+}
+
+.app article{
+    display: grid; 
+    grid-template-columns: repeat(auto-fill,minmax(590px,1fr));
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 10px;
+    position: relative;
+}
+
+.app video{
+    width: 600px;
+    height: 600px;
+    justify-self: center;
+    object-fit: unset;
+    border-radius: 10px;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+}
+
+.app div{
+    align-content: center;
+    font-size: 1.2rem;
+}
+
+.app h3{
+    font-size: 1.3rem;
+    position: absolute;
+    top: 0;
+}
+
+@media(width<1205px){
+    .app h3{
+        position: relative;
+    }
+}
+
+.contacto{
+    color: white;
+    background: rgba(0, 0, 0, 0.966);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contacto aside{
+    border-top: 1px solid white;
+    width: 80vw;   
+}
+
+.contacto header{
+    display: flex;
+    justify-content: center;
+}
+
+.contacto h4{
+    display: flex;
+    justify-content: center;
+    
+}
+
+.contacto nav{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    width: 220px;
+}
+
+.contacto footer{
+    border-top: 1px solid white;
+    width: 80vw;  
+}
